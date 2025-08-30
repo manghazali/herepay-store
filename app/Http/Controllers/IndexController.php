@@ -11,7 +11,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $products = Product::select(sprintf('%s.*', (new Product)->getTable()))->get();
+        $products = Product::all();
 
         return view('index', compact('products'));
     }
